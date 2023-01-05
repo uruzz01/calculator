@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
+}
+
+button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-size: 20px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont;
+    border: 10px solid transparent;
+}
+
+.zero, .backspace {
+    border-radius: 40px;
+    width: 105px;
+}
+
+.clear, .backspace {
+    border-color: #D4D4D2;
+    background-color: #D4D4D2;
+    color: black;
+}
+
+.numButton, .point {
+    border-color: #505050;
+    background-color: #505050;
+}
+
+.wrapper {
+    border: 1px solid #1C1C1C;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: center;
+    background-color: #1C1C1C;
+    border-radius: 25px;
+    padding: 5px;
+}
+.content {
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px; 
+}
+
+.left__buttons__numbers, .right__buttons {
+    display: flex;
+    gap: 5px; 
+}
+
+.left__buttons, .left__buttons__right, .left__buttons__left, .right__buttons__left, .right__buttons__right{
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.operationButton, .result {
+    background-color: #FF9500;
+    border-color: #FF9500;
+}
+
+.active {
+    background-color: white;
+    color: #FF9500;
+}
+
