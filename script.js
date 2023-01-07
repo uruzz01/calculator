@@ -15,6 +15,7 @@ let operatorVal = null;
 let operationsCount = 0;
 let inputVal = 0;
 let inputInd = false;
+let point;
 
 backspace.addEventListener("click", () => {
     content.textContent = content.textContent.slice(0, -1);
@@ -30,12 +31,19 @@ numButtons.forEach(button => {
         });
 
         if(content.textContent === "" && button.innerText === ".") return;
-        let point = document.querySelector(".point");
+
+        point = document.querySelector(".point");
+
         point.addEventListener("click", () => {
-            if(content.textContent.includes(".")) point = null;
-            if(point !== null) content.textContent += point.textContent;
-            
+            if(!(content.textContent.includes("."))) content.textContent += point.textContent; 
         });
+
+        if(content.textContent.includes(".")) point = null;
+
+        if(content.textContent.startsWith("0")) {
+            if(!(content.textContent.includes("."))) content.textContent += ".";
+            point = null;
+        }
 
         inputInd = true;
         content.textContent += button.textContent;
