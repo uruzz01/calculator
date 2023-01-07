@@ -16,7 +16,7 @@ button {
     color: white;
     font-size: 20px;
     font-family: -apple-system, system-ui, BlinkMacSystemFont;
-    border: 10px solid transparent;
+    border: 0px solid transparent;
 }
 
 .zero, .backspace {
