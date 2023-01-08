@@ -47,6 +47,7 @@ button {
 }
 .content {
     height: 100px;
+    max-width: 215px;
     color: white;
     display: flex;
     align-items: flex-end;
