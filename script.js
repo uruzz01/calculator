@@ -46,6 +46,7 @@ numButtons.forEach(button => {
         }
 
         inputInd = true;
+        if(content.textContent.length === 11) return;
         content.textContent += button.textContent;
     });
 });
@@ -148,6 +149,7 @@ result.addEventListener("click", () => {
     if (operatorVal === null) return;
     let res = operate(operatorVal, globalVal, content.innerText)
     if (res !== Infinity) {
+        if(res.toString().length > 11) res = res.toExponential(5);
         content.textContent = res;
         globalVal = res;
         operatorVal = null; 
@@ -228,8 +230,10 @@ function count() {
     if (operatorVal === "+") {
         let res = +operate("+", globalVal, currentValue);
         if (res !== Infinity) {
+            if(res.toString().length > 11) res = res.toExponential(5);
             globalVal = res; 
             console.log(`Second step. global value is: ${globalVal}`);
+            console.log(`res: ${res}`);
             content.textContent = globalVal;
         } 
 
@@ -237,6 +241,7 @@ function count() {
     if (operatorVal === "-") {
         let res = +operate("-", globalVal, currentValue);
         if (res !== Infinity) {
+            if(res.toString().length > 11) res = res.toExponential(5);
             globalVal = res; 
             console.log(`Second step. global value is: ${globalVal}`);
             content.textContent = globalVal;
@@ -245,6 +250,7 @@ function count() {
     if (operatorVal === "*") {
         let res = +operate("*", globalVal, currentValue);
         if (res !== Infinity) {
+            if(res.toString().length > 11) res = res.toExponential(5);
             globalVal = res; 
             console.log(`Second step. global value is: ${globalVal}`);
             content.textContent = globalVal;
@@ -253,6 +259,7 @@ function count() {
     if (operatorVal === "/") {
         let res = +operate("/", globalVal, currentValue);
         if (res !== Infinity) {
+            if(res.toString().length > 11) res = res.toExponential(5);
             globalVal = res; 
             console.log(`Second step. global value is: ${globalVal}`);
             content.textContent = globalVal;
