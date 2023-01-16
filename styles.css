@@ -10,6 +10,7 @@ body {
 }
 
 button {
+    display: flex;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -17,6 +18,8 @@ button {
     font-size: 20px;
     font-family: -apple-system, system-ui, BlinkMacSystemFont;
     border: 0px solid transparent;
+    align-items: center;
+    justify-content: center;
 }
 
 .zero, .backspace {
@@ -81,4 +84,3 @@ button {
     background-color: white;
     color: #FF9500;
 }
-
